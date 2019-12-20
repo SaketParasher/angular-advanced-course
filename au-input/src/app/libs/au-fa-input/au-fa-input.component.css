@@ -1,0 +1,36 @@
+.icon {
+  width: 20px;
+  text-align: center;
+  background: white;
+  padding: 0px 5px 2px 5px;
+}
+
+:host {
+  border: 1px solid grey;
+  padding: 1px 0px 1px 0px;
+  display: inline-block;
+}
+
+/* input-focus class will be applied on host depending on focus property of directive */
+:host.input-focus {
+  outline: none;
+  border: 1px solid #4d90fe;
+  box-shadow: 0px 0px 5px #4d90fe;
+}
+
+/* :host:focus {
+  outline: none;
+  border: 1px solid #4d90fe;
+  box-shadow: 0px 0px 5px #4d90fe;
+} */
+
+/* ::ng-deep is used to style the projected content as now input is being projected from parent and applying :host before it
+   ensures that these styles are applied to only projected input which is inside the host element in this case which is au-fa-input 
+*/
+:host ::ng-deep input {
+  border: none;
+  outline: none;
+  /* height: 100%; */
+  margin: 1px 0px;
+  box-sizing: border-box;
+}
